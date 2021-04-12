@@ -1,0 +1,106 @@
+<html>
+
+    <!-- Тук слагаме връзки към външи ресурси -->
+    <head></head>
+
+    <!-- Тук слагаме цялата информация -->
+    <body>
+
+        <!-- Секция която съдържа логото и основните навигационни линкове -->
+        <div id="header">
+
+            <!-- когато се работи с връзки към ресурси / пътища и прочие, винаги ползваме атрибут
+            * src
+            -->
+            <!-- Външен ресурс -->
+            <!-- <img src="https://avatars.githubusercontent.com/u/7565578?s=280&v=4"> -->
+
+            <!-- Вътрешен ресурс -->
+            <img src="resource/logo.jpg">
+            
+            <!-- за да направим линк, добавяме атрибута 
+              * href -->
+              <!-- Външен линк -->
+            <a href="https://developer.mozilla.org/en-US/">MDN линк</a>
+
+            <!-- Вътрешен линк -->
+            <a href="local.html">Отиди към другата страница</a>
+
+        </div>
+
+        <!-- Това е лентата за смяна на езика и за навигацията в страницата -->
+        <div id="toolbar"></div>
+
+        <div id="main">
+            <!-- Това е страничната ленка, в която имаме менюта и линкове-->
+            <div id="sidebar"></div>
+
+            <!-- Основно съдържание на нашата страница -->
+            <div id="main-content">
+
+                <h1>Въведение в HTML</h1>
+                <h2>първи стъпки за малки програмисти</h2>
+                <h3>лесно а</h3>
+
+                <h2>Въведение</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod tellus at mauris placerat fringilla. Duis fermentum in nibh eu facilisis. Curabitur in massa egestas, viverra neque a, viverra mauris. Proin sodales justo sed luctus posuere. Mauris dictum, risus at convallis consequat, dui metus accumsan mauris, sed feugiat risus diam at sapien. Aliquam condimentum sodales magna at pretium. Nulla ut arcu iaculis diam vestibulum rutrum eget sit amet risus. Vivamus metus metus, consequat sed sem vel, pellentesque maximus sem. Aenean eget gravida purus. Proin nulla libero, varius et laoreet sit amet, dictum scelerisque turpis. Aliquam venenatis leo vel enim scelerisque, eget porta tellus feugiat. Sed suscipit efficitur purus.
+                    </p>
+
+
+                <h2>Информация за курса</h2>
+
+                    <!-- тага DIV -->
+                    <!-- BLOCK елемент  -->
+                    <!-- добавя допълнителни празни пространства от горе и от доло -->
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod tellus at mauris placerat fringilla. Duis fermentum in nibh eu facilisis. 
+                        <div>
+                            Curabitur in massa egestas, viverra neque a, viverra mauris. Proin sodales justo sed luctus posuere. Mauris dictum, risus at convallis consequat, dui metus accumsan mauris, sed feugiat risus diam at sapien. Aliquam condimentum sodales magna at pretium. Nulla ut arcu iaculis diam vestibulum rutrum eget sit amet risus. Vivamus metus metus, consequat sed sem vel, pellentesque maximus sem. Aenean eget gravida purus. Proin nulla libero, varius et laoreet sit amet, dictum scelerisque turpis. Aliquam venenatis leo vel enim scelerisque, eget porta tellus feugiat. Sed suscipit efficitur purus.
+                        </div>
+                    </div>
+                    <!-- таг разделител визуализира хоризонтална линия -->
+                    <hr></hr>
+                    <div>
+                        @@ Това е допълнителен параграф
+                    </div>
+
+                    <!-- несъществуващ таг но няма проблеми, браузъра не ни се сърди -->
+                    <misho>
+                        Това е параграф в несъществуващ таг
+                    </misho>
+
+                <h2>Как ще се изпитваме</h2>
+
+                    <!-- тага SPAN -->
+                    <!-- INLINE елемент -->
+                    <span>
+                        Curabitur in massa egestas, viverra neque a, viverra mauris. Proin sodales justo sed luctus posuere. Mauris dictum, risus at convallis consequat, dui metus accumsan mauris, sed feugiat risus diam at sapien. Aliquam condimentum sodales magna at pretium. Nulla ut arcu iaculis diam vestibulum rutrum eget sit amet risus. Vivamus metus metus, consequat sed sem vel, pellentesque maximus sem. Aenean eget gravida purus. Proin nulla libero, varius et laoreet sit amet, dictum scelerisque turpis. Aliquam venenatis leo vel enim scelerisque, eget porta tellus feugiat. Sed suscipit efficitur purus.                
+                    </span>
+
+                    <span>
+                        @@ Това е допълнителен параграф
+                    </span>
+
+                <h2>Как ще протекът занятията</h2>
+                <!-- ul таг за неподредени списъци -->
+                <!-- unordered list -->
+                <ul>
+                    <li>Практически проекти</li>
+                    <li>Домашни</li>
+                </ul>
+
+                <h2>Необходими стъпки за изпращане на домашно</h2>
+                <!-- ol таг за подредени списъци -->
+                <!-- ordered list -->
+                <ol>
+                    <li>Правим си профил в GitHUb</li>
+                    <li>Решаваме домашното</li>
+                    <li>Пращаме</li>
+                </ol>
+
+            </div>
+        </div>
+
+    </body>
+</html>
