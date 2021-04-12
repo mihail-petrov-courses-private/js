@@ -26,6 +26,7 @@
 ## Полезни линкове и материали
 За да участвате в този курс в е необходим ентусиазъм и подходящите инструменти 
 - [Visual Studio Code ](https://code.visualstudio.com/)  Редактор за разработка на HTML / CSS/ Java Script
+- [GIMP ](https://www.gimp.org/downloads/)  Редактор за растерни изображения
 - [Node Js](https://nodejs.org/en/) среда за изпълнение на Java Script 
 
 ## Контакти и информация 
