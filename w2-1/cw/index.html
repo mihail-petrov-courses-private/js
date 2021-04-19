@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <style>
+            
+            /*
+            ID {
+                PROPERTY : VALUE;
+            }
+            */
+
+            /* 
+               Вземи ми всички DIV елементи и им сложи плътна рамка
+               нека тази рамка бъде с размери един пиксел
+
+               * Какво стилизираме - (всички)HTML елементи
+            */
+
+            /* Селектиране на HTML елемент */
+            div {
+                /* CSS правило */
+                border: solid 1px #77da3a;
+                /*
+                стойности за border :
+                 - плътност -- solid / dashed / dotted
+                 - размер   -- число + измерителна единица
+                 - цвят     -- текст / шеснаисетично число
+                */
+            }
+
+            /* Вземи ми всички H1 елементи и направи текста
+            да бъде с големи букви */
+
+            h1 {
+                text-transform: uppercase;
+            }
+
+            /* Вземи ми всички H1 елементш ш направи текста получер (bold)*/            
+            h1 {
+                /*font-weight: bold;*/
+                font-style: italic;
+                /*text-decoration: underline;*/
+            }
+
+            /* най-добре е правилата да се отнасят винаги към
+            един елемент и да се пишат заедно, а не по отделно както в горните два примера*/
+            h1 {
+                text-transform: uppercase;
+                font-style: italic;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="header">
+            <ul>
+                <li><a href="">Начало</a></li>
+                <li><a href="">Нашите услуги</a></li>
+            </ul>
+        </div>
+        <div id="content">
+
+            <div id="slogan">
+                <h1>Академия за малки котки</h1>
+                <h2>За моментите в които сладоста и котешкия поглед не помага</h2>
+            </div>
+
+            <div id="main-content">
+
+                <div id="section-decoration">
+                    <img src="resources/decoration/cats.png">
+                </div>
+
+                <!-- <ELEMENT style="PROPERTY:VALUE;" -->
+                <div id="section-content" 
+                     style="color: red">
+
+                    <h3>Примерен хедър</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum recusandae at incidunt totam quasi officiis aut illo beatae eligendi? Blanditiis explicabo repellat cum sapiente quo expedita delectus aspernatur corporis magni!
+                    </p>
+    
+                    <h3>Нашите цели и услуги</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, possimus fugit. Eaque optio dolore nisi officiis voluptate fugit culpa cum id ullam assumenda eligendi ab obcaecati est laboriosam, ex hic.
+                    </p>
+    
+                    <ul>
+                        <li>Първа цел</li>
+                        <li>Втора и последваща цел</li>
+                        <li>Последна и единствена цел</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="footer">
+
+            <div id="footer-social">
+                <ul>
+                    <li><img src="resources/icon/32/facebook.png"</li>
+                    <li><img src="resources/icon/32/twitter.png"</li>
+                    <li><img src="resources/icon/32/instagram.png"</li>
+                    <li><img src="resources/icon/32/dribbble.png"</li>
+                    <li><img src="resources/icon/32/tumblr.png"</li>
+                </ul>
+            </div>
+
+            <div id="footer-navigation">
+                <ul>
+                    <li>
+                        <a href="">ЧЗВ</a>
+                        <a href="">Правила за употреба</a>
+                        <a href="">Сигурност</a>
+                        <a href="">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="footer-companyinfo">
+                <span>
+                    Авторски права. Всички права запазени. Дизайн от <a href="">Responsive Web Templates</a>
+                </span>
+            </div>
+        </div>
+
+    </body>
+</html>
