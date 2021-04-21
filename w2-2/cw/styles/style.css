@@ -1,0 +1,106 @@
+/* 
+Стилови правила : 
+*   --> означава --> вземи ми всички елементи на страницата
+TAG --> означава --> вземи ми всички тагове от този вид
+#ID --> означава --> вземи ми елемент който е ID (id="sample-element")
+*/
+
+/* Browser reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #f2f2f2; 
+}
+
+/* HEADER 
+==============================================*/
+
+#header {
+
+    /* цветови стилове :  */
+    background-color: #ffffff;
+
+    /* стилове за измерения */
+    height: 54px;
+    border-bottom: solid #dedede 1px;
+}
+
+#header ul {
+    padding-top: 12px;
+    padding-left: 36px;
+}
+
+#header ul li {
+    display: inline;
+    margin-right: 25px;
+}
+
+#header ul li a {
+    color: #646464;
+    text-decoration: none;    
+}
+
+/* CONTENT
+ ====================================================*/
+
+ #content {
+    background-color: #f2f2f2;
+
+    /* NB: обясни каква е тази далавера */
+    overflow: hidden;
+ }
+
+#slogan {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#main-content {
+    margin: auto;
+    margin-top: 25px;
+    width: 906px;
+    background-color: #ffffff;
+    padding-left: 54px;
+}
+
+
+#section-content {
+    margin-top: 25px;
+}
+
+#section-content h3 {
+    margin-top: 10px;
+}
+
+#section-content p {
+    margin-top: 10px;
+}
+
+#section-content ul {
+    margin-top: 15px;
+}
+
+/* FOOTER
+ ====================================================*/
+
+ #footer {
+     background: #ffffff;
+     margin-top: 25px;
+ }
+
+/* 
+    Селектор група : родител дете
+*/
+/* Чете се : 
+    > Намери ми елемент с ID header 
+      - За всички span елементи в него приложи следния стил.
+*/
+/* #header span span {
+    color: #ff0000;
+    font-weight: bold;
+} */
+
