@@ -1,0 +1,52 @@
+/*  Text style */
+.bold   { font-weight: bold;            }
+.italic { font-style: italic;           }
+.under  { text-decoration: underline;   }
+
+
+
+/* 8px
+16px
+32px
+64px */
+
+.mt8    { margin-top: 8px;  }
+.mt16   { margin-top: 16px; }
+.mt32   { margin-top: 32px; }
+.mt64   { margin-top: 64px; }
+
+.mb8    { margin-bottom: 8px;  }
+.mb16   { margin-bottom: 16px; }
+.mb32   { margin-bottom: 32px; }
+.mb64   { margin-bottom: 64px; }
+
+.ml8    { margin-left: 8px;  }
+.ml16   { margin-left: 16px; }
+.ml32   { margin-left: 32px; }
+.ml64   { margin-left: 64px; }
+
+.mr8    { margin-right: 8px;  }
+.mr16   { margin-right: 16px; }
+.mr32   { margin-right: 32px; }
+.mr64   { margin-right: 64px; }
+
+
+.pt8    { padding-top: 8px;  }
+.pt16   { padding-top: 16px; }
+.pt32   { padding-top: 32px; }
+.pt64   { padding-top: 64px; }
+
+.pb8    { padding-bottom: 8px;  }
+.pb16   { padding-bottom: 16px; }
+.pb32   { padding-bottom: 32px; }
+.pb64   { padding-bottom: 64px; }
+
+.pl8    { padding-left: 8px;  }
+.pl16   { padding-left: 16px; }
+.pl32   { padding-left: 32px; }
+.pl64   { padding-left: 64px; }
+
+.pr8    { padding-right: 8px;  }
+.pr16   { padding-right: 16px; }
+.pr32   { padding-right: 32px; }
+.pr64   { padding-right: 64px; }

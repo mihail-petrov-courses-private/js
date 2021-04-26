@@ -1,0 +1,84 @@
+/* 
+Стилови правила : 
+*           --> означава --> вземи ми всички елементи на страницата
+TAG         --> означава --> вземи ми всички тагове от този вид
+#ID         --> означава --> вземи ми елемент който е ID (id="sample-element")
+.CLASS NAME --> означава --> вземи ми всички елементи с CLASS NAME (class="class-element")
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e5e5e5;
+}
+
+/* Изреждане на общ стил за много селектори */
+/* #block-1, #block-2, #block-3, #block-4 {
+    background-color: #fff;
+    width: 375px;
+    height: 214px;
+} */
+
+#section--contact-us h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+#section--contact-us p {
+    font-size: 16px;
+    text-align: center;
+}
+.box {
+    display: inline-block;
+    width: 375px;
+    height: 214px;
+    background-color: #fff;
+    border: solid #ff0000 1px;
+}
+
+.box span {
+    display: block;
+}
+
+.section {
+    width: 795px;
+    margin: auto;
+    border: solid #ff0000 1px;
+}
+
+
+#special-text span {
+    display: inline;
+}
+
+/* Абсолютно позициониране */
+#section--box {
+    position: relative;
+}
+
+#block-1, #block-2, #block-3, #block-4 {
+    position: absolute;
+}
+
+#block-1 { top: 0; left: 0; }
+#block-2 { top: 0; left: 380px; }
+#block-3 { top: 220px; left: 0; }
+#block-4 { top: 220px; left: 380px; }
+
+
+/* #block-1, #block-2, #block-3, #block-4 */
+
+
+
+
+/* еквивалентно е на  */
+/* 
+#block-1 { background-color: #fff; }
+#block-2 { background-color: #fff; }
+#block-3 { background-color: #fff; }
+#block-4 { background-color: #fff; } 
+*/
