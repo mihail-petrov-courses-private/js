@@ -1,0 +1,213 @@
+/* 
+Стилови правила : 
+*           --> означава --> вземи ми всички елементи на страницата
+TAG         --> означава --> вземи ми всички тагове от този вид
+#ID         --> означава --> вземи ми елемент който е ID (id="sample-element")
+.CLASS NAME --> означава --> вземи ми всички елементи с CLASS NAME (class="class-element")
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5e5;
+}
+
+
+#header {
+    height: 46px;
+    width: 100%;
+    background-color: #3e474f;
+}
+
+#navigation {
+    /* по посока на часовниковата стрелка - TOP | RIGHT | BOTTOM | LEFT */
+    padding: 0 0 0 16px; /* padding-right: 16px*/
+
+    /* padding-top: 10px;
+    padding-left: 16px; */
+}
+
+#navigation > li {
+
+    display: inline-block;
+    margin-right: 64px; 
+    padding: 15px 0;
+
+
+    /* padding: 15px;  TOP / RIGHT / BOTTOM / LEFT : 15px*/
+    /* padding: 15px 0; TOP / BOTTOM : 15px   RIGHT / LEFT : 0px */
+    /* padding: 15px 0 15px 0; */
+    /* padding-top: 15px;
+    padding-bottom: 15px; */
+
+
+    color: #fefefe;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+.menu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    /* 
+        Скриваме целия елементш
+     */
+    display: none;
+    width: 100%;
+
+    top: 43px;
+
+    /* 
+        Скрива съдържанието, запазваики измеренията на скрития елемент
+    */
+    /* visibility: hidden; */
+
+    list-style: none;
+
+    border-left: dashed 1px #3e474f;
+}
+
+.submenu li {
+    padding: 6px;
+}
+
+
+/* Задание : Искам да си промениш цвета само ако, над теб има мишка - курсор.
+ */
+
+ #navigation li:hover {
+
+     color: #ff0000;
+     cursor: pointer;
+ }
+
+ #navigation li:hover .submenu {
+    display: block;
+}
+
+
+
+
+/* Изреждане на общ стил за много селектори */
+/* #block-1, #block-2, #block-3, #block-4 {
+    background-color: #fff;
+    width: 375px;
+    height: 214px;
+} */
+
+#section--contact-us h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+#section--contact-us p {
+    font-size: 16px;
+    text-align: center;
+}
+.box {
+
+    width: 50%;
+    height: 214px;
+    background-color: #fff;
+    border: solid #ff0000 1px;
+
+    /* Float layout */
+    float: left;
+
+    padding: 75px;
+
+    /* box-sizing: border-box; */
+}
+
+
+.box--general {
+
+    width: 50%;
+    height: 214px;
+    background-color: #fff;
+    border: solid #ff0000 1px;
+    /* padding: 75px; */
+}
+
+.box span {
+    display: block;
+}
+
+.section {
+    width: 795px;
+    margin: auto;
+    border: solid #ff0000 5px;
+}
+
+
+#special-text span {
+    display: inline;
+}
+
+
+#section--box::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+
+/* Абсолютно позициониране */
+/* 
+#section--box {
+    position: relative;
+}
+
+#block-1, #block-2, #block-3, #block-4 {
+    position: absolute;
+}
+
+#block-1 { top: 0; left: 0; }
+#block-2 { top: 0; left: 380px; }
+#block-3 { top: 220px; left: 0; }
+#block-4 { top: 220px; left: 380px; } */
+
+
+/* #block-1, #block-2, #block-3, #block-4 */
+
+
+
+
+/* еквивалентно е на  */
+/* 
+#block-1 { background-color: #fff; }
+#block-2 { background-color: #fff; }
+#block-3 { background-color: #fff; }
+#block-4 { background-color: #fff; } 
+*/
+
+
+.hack {
+    display: inline;
+    visibility: hidden;
+}
+
+
+.element {
+    width: 25%;
+    height: 100px;
+}
+
+
+
+/* FLEXBOX позициониране */
+
+/* 1. Откриваме родителя и му задаваме стилово свойство */
+#section--flex {
+    display: flex;
+    flex-wrap: wrap;
+}
