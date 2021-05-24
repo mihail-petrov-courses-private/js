@@ -35,65 +35,63 @@ if(enverinmentInput == OBJECT__EMPTY) {
 
 console.log(directionCommand);
 
-// Необходимо е да програмираме бойна система, все пак робота ни е каратист, трябва да проверяваме няколко неща, 
-
-// * дали мишката се намира пред робота, 
-// Робота имплементира сложна система за откриване на обекти, получава от околната среда броя на пикселите в пространството ( въвежда се на ръка от вас, нямаме пари за сензори ) и ако броят им се дели на 2 без остатък то тогава мишката е засечена и робота се приготвя за атака.
-var environmentInputPixels = prompt("Моля въведете броя на пикселите наоколо ? ");
-var isTargetDetected       = environmentInputPixels % 2 == 0;
+// създаваме си общи променливи за програмата
+var numberOfHitsUntilNow    = 0;
 
 
-// * дали батерията е заредена и 
-// Дали батерията е заредена се разбира от броя на направените удари до този момент. Робота може да направи общо 4 удара, преди да му паднат батериите ако броя на ударите е под това число то може да се направи още един
-var numberOfHitsUntilNow = 0;
-// hasBatteryPower / isBatteryOn / hasPower
-var isBatteryFull = numberOfHitsUntilNow < MAX_NUMBER_OF_HIT;
+function getRandomNumberBetweenMinAndMax(min, max) {
 
+    var randomNumber        = Math.random() * (max - min) + min;
+    randomNumber            = Math.floor(randomNumber);
+    return randomNumber;
+}
 
-// * дали можем да нанесем удар без да потрошим мебелите вкъщи, за всичко тези условие е необходимо да направим проверки.
-// Дали удара ще бъде съкрушителен за мебелите се определя на случаен принцип, Генерира се произволно число от 1 до 10 и ако числото е равно на 5 то удара изпотрошава мебелите, в противен случай го отнася само мишката.
-var randomNumber    = Math.random() * (RANDOM_MAX - RANDOM_MIN) + RANDOM_MIN;
-randomNumber        = Math.floor(randomNumber);
+function hasEnergy() {
+    return numberOfHitsUntilNow < MAX_NUMBER_OF_HIT;
+}
 
-// може да съдържаме негативна логика в променливата
-var isFurbitureHitable  = randomNumber == 5;
+// създаваме си един общ цикъл който ще върти програмата до безкрай
+while(true) {
 
-// може да съдържаме позитивна логика в променливата
-var isTargetHittable    = randomNumber != 5;
+    // #1. проверка за намерена цел
+    var environmentInputPixels = prompt("Моля въведете броя на пикселите наоколо ? ");
+    var isTargetDetected       = environmentInputPixels % 2 == 0;
 
-// проверка дали удара е успешене
-var isHitSuccesful =    isTargetDetected    && 
-                        isBatteryFull       &&
-                        isTargetHittable;
+    // #2. проверка за заредена батерия
+    
+    var isBatteryFull           = hasEnergy();
 
-if(isHitSuccesful) {
-    // вариант с присвояване на същата променлива +1 
-    numberOfHitsUntilNow = numberOfHitsUntilNow + 1;
+    // #3. проверка за деликатен удар
+    var randomNumber        = getRandomNumberBetweenMinAndMax(RANDOM_MIN, RANDOM_MAX);
+    var isTargetHittable    = randomNumber != 5; 
 
-    // вариант с кратко приясвояване
-    // numberOfHitsUntilNow += 1;
+    // #4. проверка дали удара е успешен
+    var isHitSuccesful =    isTargetDetected    && 
+                            isBatteryFull       &&
+                            isTargetHittable;    
 
-    // вариант с инкрементация
-    // numberOfHitsUntilNow++;
+    if(isHitSuccesful) {
 
+        console.log("Успешен удар, ура !!!");
+        numberOfHitsUntilNow = numberOfHitsUntilNow + 1;
+        // # Правим проверка дали имаме ток в системата
+        if(!hasEnergy()) {
 
-    // # Правим проверка дали имаме ток в системата
-    var hasEnergy = numberOfHitsUntilNow < MAX_NUMBER_OF_HIT;
+            // зареждане на батериите
+            var phaseEmiterNumberCoeficient = 0; // undefined
+            var nullEmiterNumberCoeficient  = 1; // undefined
 
-    if(hasEnergy) {
-        // да повторим цялата операция
+            while(phaseEmiterNumberCoeficient < nullEmiterNumberCoeficient) { 
+
+                phaseEmiterNumberCoeficient  = getRandomNumberBetweenMinAndMax(RANDOM_PHASE_EMITER__MIN, RANDOM_PHASE_EMITER__MAX);
+                nullEmiterNumberCoeficient   = getRandomNumberBetweenMinAndMax(RANDOM_PHASE_EMITER__MIN, RANDOM_PHASE_EMITER__MAX);
+            }
+
+            numberOfHitsUntilNow = 0;
+            console.log("Батерията е успешно заредена");
+        }
     }
     else {
-        // зареждане на батериите
-        var phaseEmiterNumberCoeficient  = Math.random() * (RANDOM_PHASE_EMITER__MAX - RANDOM_PHASE_EMITER__MIN) + RANDOM_PHASE_EMITER__MIN;
-        phaseEmiterNumberCoeficient        = Math.floor(phaseEmiterNumberCoeficient);        
-
-        var nullEmiterNumberCoeficient  = Math.random() * (RANDOM_PHASE_EMITER__MAX - RANDOM_PHASE_EMITER__MIN) + RANDOM_PHASE_EMITER__MIN;
-        nullEmiterNumberCoeficient        = Math.floor(nullEmiterNumberCoeficient);
-
-        var isEmiterChargable =  phaseEmiterNumberCoeficient > nullEmiterNumberCoeficient;
-        if(isEmiterChargable) {
-            numberOfHitsUntilNow = 0;
-        }
+        console.log("Уви не става, ще пробвам отново с нови параметри");
     }
 }
