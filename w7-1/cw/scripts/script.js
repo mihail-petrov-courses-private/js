@@ -1,5 +1,9 @@
 var eventCollection = [];
 
+var functionVariable = function sampleFunction() {
+    console.log("This is very strange");
+}
+
 function generateId() {
 
     var randomGeneratedId = "";
@@ -17,14 +21,28 @@ function createNewEvent(parameterEventTitle = "Анонимно парти", par
 
     if(parameterEventTitle) {
 
-        // създаваме нов обект, който да съдържа данни за събитието
-        var newEventData             = {};
-        newEventData['eventTitle']   = parameterEventTitle;
-        newEventData['eventId']      = generateId();
-        newEventData['isAdoultOnly'] = parameterIsAdultOnly;
+        var newEvent = {
+            eventTitle      : parameterEventTitle,
+            eventId         : generateId(),
+            isAdoultOnly    : parameterIsAdultOnly,
 
-        // добавяне на събитието към списъка със събития
-        eventCollection[eventCollection.length] = newEventData;
+            // създавам нов ключ, който ще съдържа в себе си функция
+            getEventInfo    : function getEventInfo() {
+                console.log(newEvent.eventTitle)
+                console.log(newEvent.eventId)
+        
+                if(newEvent.isAdoultOnly) {
+                    console.warn("Партито е само за големи");
+                }
+                else {
+                    console.log("Партито е за всякакви възрасти");
+                }
+        
+                console.log("===");
+            }
+        };
+
+        eventCollection[eventCollection.length] = newEvent;
     }
 }
 
@@ -33,18 +51,7 @@ function listEventCollection() {
     for(var i = 0; i < eventCollection.length; i ++) {
 
         var event = eventCollection[i]; 
-
-        console.log(event.eventTitle)
-        console.log(event.eventId)
-
-        if(event.isAdoultOnly) {
-            console.warn("Партито е само за големи");
-        }
-        else {
-            console.log("Партито е за всякакви възрасти");
-        }
-
-        console.log("===");
+        event.getEventInfo();
     }
 }
 
