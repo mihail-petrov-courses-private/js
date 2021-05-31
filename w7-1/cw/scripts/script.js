@@ -1,10 +1,6 @@
 var eventCollection = [];
 
-var functionVariable = function sampleFunction() {
-    console.log("This is very strange");
-}
-
-function generateId() {
+const generateId = function() {
 
     var randomGeneratedId = "";
     var numberOfRandomIterations = Math.floor(Math.random() * 50) + 10;
@@ -17,21 +13,22 @@ function generateId() {
 }
 
 
-function createNewEvent(parameterEventTitle = "Анонимно парти", parameterIsAdultOnly) {
+const createNewEvent = function(parameterEventTitle = "Анонимно парти", parameterIsAdultOnly) {
 
     if(parameterEventTitle) {
 
-        var newEvent = {
+        eventCollection[eventCollection.length] = {
             eventTitle      : parameterEventTitle,
             eventId         : generateId(),
             isAdoultOnly    : parameterIsAdultOnly,
 
             // създавам нов ключ, който ще съдържа в себе си функция
-            getEventInfo    : function getEventInfo() {
-                console.log(newEvent.eventTitle)
-                console.log(newEvent.eventId)
+            getEventInfo    : function() {
+
+                console.log(this.eventTitle)
+                console.log(this.eventId)
         
-                if(newEvent.isAdoultOnly) {
+                if(this.isAdoultOnly) {
                     console.warn("Партито е само за големи");
                 }
                 else {
@@ -41,12 +38,10 @@ function createNewEvent(parameterEventTitle = "Анонимно парти", par
                 console.log("===");
             }
         };
-
-        eventCollection[eventCollection.length] = newEvent;
     }
 }
 
-function listEventCollection() {
+const listEventCollection = function() {
 
     for(var i = 0; i < eventCollection.length; i ++) {
 
@@ -55,7 +50,7 @@ function listEventCollection() {
     }
 }
 
-function removeEventById(eventId) {
+const removeEventById = function(eventId) {
 
     var eventIndex = 0;
     for(var i = 0; i < eventCollection.length; i++) {
