@@ -1,0 +1,9 @@
+.reporting-panel--element {
+    font-size: 24px;
+}
+
+.reporting-panel--counter {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 24px;
+}
