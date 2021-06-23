@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/style.css"/>
+
+    <script src="scripts/util/generate.js"></script>
+
+    <!-- All models -->
+    <script src="scripts/models/product.model.js"></script>
+
+    <!-- All managers -->
+    <script src="scripts/managers/budget.manager.js"></script>
+    <script src="scripts/managers/operation.manager.js"></script>
+    <script src="scripts/managers/product.manager.js"></script>
+
+    <!-- All guards -->
+    <script src="scripts/guards/guards.js"></script>
+
+    <!-- All ioperations -->
+    <script src="scripts/controllers/day-start.controller.js"></script>
+    <script src="scripts/controllers/day-end.controller.js"></script>
+    <script src="scripts/controllers/bribe.controller.js"></script>
+    <script src="scripts/controllers/buy.controller.js"></script>
+    <script src="scripts/controllers/sell.controller.js"></script>
+    <script src="scripts/controllers/report.controller.js"></script>
+
+    <!-- функционална имплементация и интеракция -->
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+
+    <div id="action-panel">
+        <button id="action--open-day">Отваряне на ден</button>
+        <button id="action--buy">Покупка</button>
+        <button id="action--sell">Продажба</button>
+        <button id="action--bribe">Рушвет</button>
+        <button id="action--report">Справка</button>
+        <button id="action--close-day">Затваряне на ден</button>
+    </div>
+
+    <div id="main-panel">
+      
+    </div>
+
+    <!-- графична имплементация и интеракция -->
+    <script src="scripts/controllers/application.controller.js"></script>    
+</body>
+</html>
