@@ -1,0 +1,45 @@
+.reporting-panel--element {
+    font-size: 24px;
+}
+
+.reporting-panel--counter {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+#buy--panel {
+    width: 300px;
+}
+
+#buy--panel label {
+    display: block;
+}
+
+#buy--panel input {
+    width: 100%;
+    padding: 5px;
+}
+
+
+
+.input--submit {
+    width: 105%;
+    padding: 5px;
+    background: #d91b5c;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    font-family: Tahoma;
+    margin-top: 10px;
+}
+
+.input--error {
+    border: solid #ff0000 2px;
+}
+
+.error-message {
+    color: #ff0000;
+    font-weight: bold;
+}
