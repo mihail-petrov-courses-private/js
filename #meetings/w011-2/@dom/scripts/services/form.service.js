@@ -1,26 +1,21 @@
 const FormService = (() => {
 
-    const formServiceGlobalObject = {};
-
-
     let formInputReference;
 
-    const ERROR_MESSAGE = {
-        "required" : "Полето е задължително"
-    };
+    const ERROR_MESSAGE = {};
 
     const validationRule = {};
 
-    validationRule.required = (value, ruleArgument) => {
-        return value && value.length > 0;
-    };
+    // Мисля си че така би работило - правилно
+    const setRule = (ruleId, ruleDescriptorObject) => {
 
-    validationRule.minLength = (value, ruleArgument) => {
-        return value && value.length >= ruleArgument.length;
-    };
+        if(ruleId && ruleDescriptorObject.callback) {
+            validationRule[ruleId] = ruleDescriptorObject.callback;
+        }
 
-    validationRule.maxLength = (value, ruleArgument) => {
-        return value && value.length <= ruleArgument.length;
+        if(ruleId && ruleDescriptorObject.message) {
+            ERROR_MESSAGE[ruleId] = ruleDescriptorObject.message;
+        }
     };
 
     /**
@@ -55,60 +50,17 @@ const FormService = (() => {
         existingDomElementParent.insertBefore(newDomElement, existingDomElementSibling);
     };
 
-
     /**
      * @author Mihail Petrov
      */
-    const isFormValid = () => {
+     const isFormValid = () => {
 
         for(let inputReference of formInputReference) {
             
             let domElement  = inputReference.input;
             let ruleObject  = inputReference.rules;
 
-            if(isInputFieldInvalid(domElement, ruleObject)) {
-
-                // TODO: стилизирай като компонент който е не валиден
-                domElement.classList.add('input--error');
-
-                // 0. Правя проверка дали error-placehoder div в който пъхам грешките вече съществува
-                const nextElement = domElement.nextSibling;
-                if(nextElement.getAttribute('data-is-error-placeholder')) {
-                    // process existing element
-                }
-                else {
-                    // Как да визуализираме съобщение под дадено input поле ?
-                    // 1. Да си създадем нов HTML елемент в който да пъхнем съобщението
-                    const newHtmlElement = document.createElement("div"); // DIV
-                    newHtmlElement.setAttribute('data-is-error-placeholder', "");
-                    newHtmlElement.innerHTML = "Error message";
-                    insertAfter(domElement, newHtmlElement);
-                }
-
-                return false;
-            }
-            else {
-                // TODO: направи го стандартен input
-                // нормално стилизиране
-                domElement.classList.remove('input--error');
-            }
-        }
-
-        return true;
-    };
-
-
-    /**
-     * @author Mihail Petrov
-     */
-     const isFormValidCallback = () => {
-
-        for(let inputReference of formInputReference) {
-            
-            let domElement  = inputReference.input;
-            let ruleObject  = inputReference.rules;
-
-            let isInvalid = isInputFieldInvalidWithCallbackFunctions(domElement, ruleObject, 
+            let isInvalid = isInputFieldInvalid(domElement, ruleObject, 
                 
                 (ruleId) => {
 
@@ -120,7 +72,7 @@ const FormService = (() => {
                     if(nextElement.getAttribute('data-is-error-placeholder') == "true") {
                         nextElement.remove();
                     }
-                    
+
                     const newHtmlElement = document.createElement("div"); // DIV
                     newHtmlElement.setAttribute('data-is-error-placeholder', "true");
                     newHtmlElement.setAttribute('class', 'error-message');
@@ -134,8 +86,6 @@ const FormService = (() => {
 
                     domElement.classList.remove('input--error');
                     const nextElement = domElement.nextElementSibling;
-                    console.log(nextElement);
-                    console.log(nextElement.getAttribute('data-is-error-placeholder'));
                     if(nextElement.getAttribute('data-is-error-placeholder') == "true") {
                         nextElement.remove();
                     }
@@ -153,52 +103,23 @@ const FormService = (() => {
     };
 
 
-
-    /**
-     * @author Mihail Petrov
-     * @param {*} domElement 
-     * @param {*} ruleObject 
-     * @returns 
-     */
-    const isInputFieldInvalid = (domElement, ruleObject) => {
+    const isInputFieldInvalid = (domElement, ruleObject, invalidCallback, validCallback) => {
 
         const domElementValue = domElement.value;
 
         for(let ruleFunction in ruleObject) {
 
-            const ruleArgument = ruleObject[ruleFunction]; // object
-            if(!validationRule[ruleFunction](domElementValue, ruleArgument)) return true;
-
-            // if(ruleKey == "required"  && !validateIsRequired(domElementValue)                ) return true;
-            // if(ruleKey == "minLength" && !validateMinLength(domElementValue, ruleArgument)  ) return true;
-            // if(ruleKey == "maxLength" && !validateMaxLength(domElementValue, ruleArgument)  ) return true;
-        }
-
-        return false;
-    };
-
-    const isInputFieldInvalidWithCallbackFunctions = (domElement, ruleObject, invalidCallback, validCallback) => {
-
-        const domElementValue = domElement.value;
-
-        for(let ruleFunction in ruleObject) {
-
-            const ruleArgument = ruleObject[ruleFunction]; // object
+            const ruleArgument = ruleObject[ruleFunction];
             if(!validationRule[ruleFunction](domElementValue, ruleArgument)) {
-                // invalidCallback(ruleFunction);
-                // return true;
-                formServiceGlobalObject.currentInvalidRuleId = ruleFunction;
                 return invalidCallback(ruleFunction);
             }
         }
 
-        // validCallback();
-        // return false;
         return validCallback();
     };
 
     return {
-        register, isFormValid, isFormValidCallback
+        register, isFormValid, setRule
     }
 
 })();

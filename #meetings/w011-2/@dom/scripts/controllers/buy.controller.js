@@ -1,49 +1,5 @@
 const BuyController = (() => {
 
-    // TODO: Да изнеса логиката за валидиране на формите в отделен самостоятелен компонент 
-    // (сервиз)
-    let isFormValidFlag = true;
-
-    const initValidation = () => {
-        isFormValidFlag = true;
-    };
-
-    const required = (input) => {
-
-        if(!isFormValidFlag) return;
-
-        const rule = input.value && input.value.length > 0;
-        if(!rule) {
-            input.style.borderColor = "#ff0000";
-            isFormValidFlag = false;
-        }
-        else {
-            input.style.borderColor = "#767676";
-        }
-    };
-
-    const minLength = (input, length) => {
-
-        const rule = input.value && input.value.length >= length;
-
-        if(!rule) {
-            input.style.borderColor = "#ff0000";
-            isFormValidFlag = false;
-        }
-        else {
-            input.style.borderColor = "#767676";
-        }
-    }
-
-    const isFormValid = () => {
-        return isFormValidFlag;
-    };
-
-    const isFormInvalid = () => {
-        return !isFormValid();
-    }
-
-
     const controller = () => {
 
         const formCategoryInput     = document.getElementById("form--category");
@@ -72,7 +28,13 @@ const BuyController = (() => {
             },
             {
                 input: formCountInput,
-                rules: { required: true }
+                rules: { 
+                    required    : { message: "Полето за количество е задължително"},
+                    max         : { 
+                        message : "Надвишихте стойността", 
+                        value   : 10
+                    }
+                }
             },
             {
                 input: formBuyPriceInput,
@@ -87,33 +49,9 @@ const BuyController = (() => {
 
         formActionSubmit.addEventListener('click', (event) => {
 
-            // Пояснение : спира последващото презареждане на страницата 
-            // презареждането е част от изпращането на формуляр
             event.preventDefault();
 
-            // валидация на формуляр
-            // initValidation();
-
-            // прототип за имплементация на регистратор за валидационни правила
-            // initValidation([{
-            //     "input" : formCategoryInput,
-            //     "rules" : [{
-            //         required    : {},
-            //         minLength   : { length : 5},
-            //         maxLength   : { length : 15},
-            //     }]
-            // }]);
-
-            // required(formCategoryInput);
-            // required(formTitleInput);
-            // required(formCountInput);
-            // required(formBuyPriceInput);
-            // required(formSellPriceInput);
-
-            // if(isFormInvalid()) return;
-            // проверка за валидност
-
-            if(!FormService.isFormValidCallback()) {
+            if(!FormService.isFormValid()) {
                 return;
             }
 
