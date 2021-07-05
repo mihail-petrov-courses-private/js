@@ -1,0 +1,11 @@
+#first {
+    background-color: #ff0000;
+    width: 250px;
+    height: 250px;
+}
+
+.element {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
