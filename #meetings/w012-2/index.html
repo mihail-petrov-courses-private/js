@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/style.css"/>
+    <script src="scripts/vendor/domat.js"></script>    
+</head>
+<body>
+
+    <div
+        id="component-todo"
+        class="component">
+
+        <div 
+            class="component-todo--header">
+
+            <input 
+                id="component-todo--input"
+                placeholder="Какво ще правим днес ?"
+                type="text">
+
+            <button
+                id="component-todo--input-action">
+                Добави
+            </button>
+
+        </div>
+
+        <div
+            id="component-todo--list">
+        </div>
+
+        <div
+            class="hide"
+            id="component-todo--toolbar">
+
+            <div 
+                class="panel"
+                id="component-todo--toolbar-total">
+                общо задачи 3
+            </div>
+            <div
+                class="panel" 
+                id="component-todo--toolbar-action">
+                <button class="button-acction">Всички</button>
+                <button class="button-acction">Активни</button>
+                <button class="button-acction">Готови</button>
+            </div>
+
+        </div>        
+        
+    </div>
+    
+
+    <script src="scripts/component/todo.component.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
