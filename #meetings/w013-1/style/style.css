@@ -1,0 +1,84 @@
+#component-todo {
+    width: 400px;
+    margin: auto;
+}
+
+#component-todo--input {
+    width: 300px;
+    padding: 8px;
+    background: #f8f8f8;
+    border: none;
+    border-bottom: solid #dedede 3px;
+}
+
+#component-todo--input-action {
+    padding: 8px;
+    background: #ff6347;
+    border: none;
+    border-bottom: solid #dedede 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.todo--item {
+    display: flex;
+    margin-top: 3px;
+    width: 381px;
+    padding: 3px 0 3px 11px;
+    text-transform: capitalize;
+}
+
+.todo--item-action {
+    text-align: right;
+    margin-right: 6px;
+}
+
+#component-todo--toolbar {
+    display: flex;
+    background: #f8f8f8;
+    margin-top: 8px;
+    padding: 5px;
+    width: 382px;
+}
+
+.button-acction {
+    cursor          : pointer;
+    background      : #95847d;
+    border          : none;
+    color           : #fff;
+    text-transform  : lowercase;
+}
+
+.state--done {
+    background  : #fea090;
+    color       : #fff;
+}
+
+.state--active {
+    background  : #4485f5;
+    color       : #fff;
+}
+
+.bg--89e051 {
+    background: #89e051!important;
+}
+
+.bg--d60b52 {
+    background: #d60b52!important;
+}
+
+.bg--4485f5 {
+    background: #4485f5!important;
+}
+
+.hide {
+    display: none!important;
+}
+
+.show {
+    display: block;
+}
+
+.panel {
+    flex: 1;
+}
