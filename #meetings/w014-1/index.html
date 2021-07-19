@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/style.css"/>
+</head>
+<body>
+
+    <div id="application">
+        <div id="canvas-placeholder">
+            <canvas 
+                width="650"
+                height="315"
+                id="canvas"></canvas>
+        </div>
+        <div id="canvas-toolbar">
+            <button id="line">line</button>
+            <button id="rect">Rect</button>
+            <button id="circle">Circle</button>
+        </div>
+    </div>
+
+    <script src="scripts/vendor/domat.js"></script>
+
+    <script src="scripts/canvas/shapes/Rect.js"></script>
+    <script src="scripts/canvas/shapes/Line.js"></script>
+    <script src="scripts/canvas/shapes/Circle.js"></script>
+
+    <script src="scripts/canvas/factory/canvas.factory.js"></script>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

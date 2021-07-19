@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fafafa;
+}
+
+#canvas-placeholder {
+    background: #ffffff;
+    border: solid #dededede;
+    width: 650px;
+    height: 315px;
+    margin: auto;
+    margin-top: 75px;
+}
