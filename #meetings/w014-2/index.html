@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/style.css"/>
+    <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div id="application">
+        <div id="canvas-placeholder">
+            <canvas 
+                width="650"
+                height="315"
+                id="canvas"></canvas>
+            <div id="canvas-toolbar">
+                <i data-shape="pencil"   class="bx bxs-pencil"></i>
+                <i data-shape="line"     class="bx bxs-pen" ></i>
+                <i data-shape="rect"     class="bx bx-rectangle"></i>
+                <i data-shape="circle"   class="bx bx-circle"></i>
+
+                <i class='bx bx-dots-vertical'></i>
+                
+                <i data-color="#ff0000"   class="color-palet color--ff0000"></i>
+                <i data-color="#00ff00"   class="color-palet color--00ff00"></i>
+                <i data-color="#0000ff"   class="color-palet color--0000ff"></i>
+                <i data-color="#ff00ff"   class="color-palet color--ff00ff"></i>
+
+                <i class='bx bx-dots-vertical'></i>
+                <i data-tool="select" class='bx bx-pointer' ></i>
+                <i data-tool="move" class='bx bx-move' ></i>
+            </div>                
+        </div>
+
+    </div>
+
+    <script src="scripts/vendor/domat.js"></script>
+
+    <!-- Canvas reference -->
+    <script src="scripts/canvas/shapes/Rect.js"></script>
+    <script src="scripts/canvas/shapes/Line.js"></script>
+    <script src="scripts/canvas/shapes/Circle.js"></script>
+
+    <script src="scripts/canvas/factory/canvas.factory.js"></script>
+
+    <script src="scripts/canvas/managers/canvas.manager.js"></script>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fafafa;
+}
+
+i {
+    cursor: pointer;
+}
+
+#canvas-placeholder {
+    background: #ffffff;
+    border: solid #dededede;
+    width: 650px;
+    height: 315px;
+    margin: auto;
+    margin-top: 75px;
+}
+
+.color-palet {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+
+.color--ff0000 { background: #ff0000; }
+.color--00ff00 { background: #00ff00; }
+.color--0000ff { background: #0000ff; }
+.color--ff00ff { background: #ff00ff; }
