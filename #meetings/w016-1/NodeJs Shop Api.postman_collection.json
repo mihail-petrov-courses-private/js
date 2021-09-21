@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "a00c0b3a-4d61-4edb-875f-7fafda6c1707",
+		"name": "NodeJs Shop Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1234/products",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Products with Limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "List single product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1234/products/10",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"products",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
