@@ -32,6 +32,12 @@ queryBuilderReference.orWhere = (column, value) => {
     return queryBuilderReference;
 };
 
+queryBuilderReference.limit = (limit) => {
+
+    query.push(`LIMIT ${limit}`);
+    return queryBuilderReference;
+};
+
 
 // INSERT
 // INSERT INTO products(title, category, sub_category)
