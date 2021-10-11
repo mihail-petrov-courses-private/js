@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "a00c0b3a-4d61-4edb-875f-7fafda6c1707",
+		"name": "NodeJs Shop Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api:products",
+			"item": [
+				{
+					"name": "list",
+					"item": [
+						{
+							"name": "List All Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1234/products",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List All Products with Limit",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1234/products?limit=2",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List All Products [with pagination]",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1234/products?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List single product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1234/products/1",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List single product - [not available]",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:1234/products/10",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"products",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create",
+					"item": [
+						{
+							"name": "Create new product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Cosmodisk\",\r\n    \"category\": \"tecknology\",\r\n    \"subCategory\": \"utility\",\r\n    \"options\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1234/products",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "update",
+					"item": [
+						{
+							"name": "Update existing product",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Cosmodisk Max\",\r\n    \"category\": \"tecknology\",\r\n    \"subCategory\": \"utility\",\r\n    \"options\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1234/products/17",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"products",
+										"17"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "remove",
+					"item": [
+						{
+							"name": "Remove existing product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:1234/products/16",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"products",
+										"16"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "api:util",
+			"item": [
+				{
+					"name": "404",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1234/not_found_url",
+							"host": [
+								"localhost"
+							],
+							"port": "1234",
+							"path": [
+								"not_found_url"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
