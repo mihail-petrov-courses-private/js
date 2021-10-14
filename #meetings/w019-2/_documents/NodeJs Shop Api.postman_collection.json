@@ -14,6 +14,9 @@
 						{
 							"name": "List All Products",
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -228,6 +231,133 @@
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "api:auth",
+			"item": [
+				{
+					"name": "sing in",
+					"item": [
+						{
+							"name": "sign in",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"mihail\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1234/auth/signin",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sign in [with invalid username]",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"invalid\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1234/auth/signin",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sign in [with invalid password]",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"mihail\",\r\n    \"password\": \"invalid\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1234/auth/signin",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "sign up",
+					"item": [
+						{
+							"name": "sign up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"mihail\",\r\n    \"password\": \"password\",\r\n\r\n    \"fname\" : \"Mihail\",\r\n    \"lname\" : \"Petrov\",\r\n    \"email\" : \"mail@mail.bg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:1234/auth/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "1234",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}

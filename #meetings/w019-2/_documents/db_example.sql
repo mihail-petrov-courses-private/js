@@ -57,3 +57,10 @@ CREATE TABLE `nodejs_products`.`user_tokken` (
   `tokken` VARCHAR(256) NOT NULL,
   PRIMARY KEY (`user_id`)
 )
+
+
+ALTER TABLE `nodejs_products`.`users` 
+ADD UNIQUE INDEX `username_UNIQUE` (`username` ASC);
+
+ALTER TABLE `nodejs_products`.`users` 
+ADD UNIQUE INDEX `email_UNIQUE` (`email` ASC);
