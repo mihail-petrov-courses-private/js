@@ -1,0 +1,49 @@
+* {
+    margin  : 0;
+    padding : 0;
+}
+
+#toolbar {
+    background-color: #026aa7;
+    height: 40px;
+    color: #fff;
+}
+
+#toolbar--wrapper {
+    padding-top: 4px;
+    margin-left: 20px;
+}
+
+#app-logo {
+    font-size   : 21px;
+    display     : inline-block;
+}
+
+#menu-top {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+#menu-top ul {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu-item {
+    cursor      : pointer;
+    display     : inline-block;
+    font-size   : 14px;
+    padding     : 6px 12px;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius   : 3px;
+}
+
+.square {
+    width               : 15px;
+    height              : 15px;
+    display             : inline-block;
+    background-color    : #fff;
+}
