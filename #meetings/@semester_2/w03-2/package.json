@@ -1,0 +1,20 @@
+{
+  "name": "mrello",
+  "version": "1.0.0",
+  "description": "Ultimate PM system Trello clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Mihail Petrov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
+  }
+}
