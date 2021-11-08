@@ -1,0 +1,22 @@
+.menu-category {
+
+}
+
+.menu-category--title {
+    font-weight : bold;
+    cursor      : pointer;
+    font-size   : 20px;
+    padding     : 3px 5px;
+}
+
+.menu-category--header {
+    padding: 5px 0;
+}
+
+.menu-category--menu {
+    padding-left: 30px;
+}
+
+.menu-category--menu-item {
+    padding : 5px 0;
+}
