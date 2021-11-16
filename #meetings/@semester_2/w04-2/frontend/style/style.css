@@ -1,0 +1,105 @@
+* {
+    margin          : 0;
+    padding         : 0;
+    list-style      : none;
+    text-decoration : none;
+    box-sizing      : border-box;
+}
+
+body {
+    background: #f9fafc;
+}
+
+ul li {
+    cursor: pointer;
+}
+
+#toolbar {
+    background-color: #026aa7;
+    height: 40px;
+    color: #fff;
+}
+
+#toolbar--wrapper {
+    padding-top: 4px;
+    margin-left: 20px;
+}
+
+#app-logo {
+    font-size   : 21px;
+    display     : inline-block;
+}
+
+#menu-top {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+#menu-top ul {
+    display: inline-block;
+}
+
+.menu-item {
+    cursor      : pointer;
+    display     : inline-block;
+    font-size   : 14px;
+    padding     : 6px 12px;
+}
+
+.menu-item a {
+    color: #fff;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius   : 3px;
+}
+
+.square {
+    width               : 15px;
+    height              : 15px;
+    display             : inline-block;
+    background-color    : #fff;
+}
+
+/* #wrapper {
+    padding-top     : 35px;;
+    display         : flex;
+    width           : 1090px;
+    height          : 350px;
+    margin          : auto;
+} */
+
+#app-sidebar {
+    width: 240px;
+}
+
+#app-content {
+    padding: 5px 30px;
+}
+
+
+.block--menu-item {
+    font-size: 20px;
+    padding: 3px 5px;
+}
+
+.block--menu-item:hover {
+    background-color: rgba(9, 30, 66, 0.08);
+    padding         : 3px 5px ;
+    border-radius   : 3px;
+}
+
+.block-header {
+    display: flex;
+}
+
+.block-header--title {
+    cursor      : pointer;
+    font-size   : 14px;
+    padding     : 3px 5px;
+}
+
+.block-header--icon {
+
+}
