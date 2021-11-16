@@ -1,0 +1,44 @@
+<div class="dialog-wrapper">
+    <div class="dialog">
+
+        <h1 class="dialog-header">Let's build a Workspace</h1>
+        <h2 class="dialog-subtext mt12">Boost your productivity by making it easier for everyone to access boards in one location.</h2>
+        
+        <div 
+            id="error-message" 
+            class="placeholder placeholder--red">
+        </div>            
+
+        <form
+            id="form--create-workspace"
+            data-form="create-workspace">
+
+            <input 
+                class="input"
+                type="text" 
+                placeholder="Workspace name"
+                data-name="title"
+                data-validation-required>
+            <select 
+                class="input"
+                data-name="category">
+                <option value="Busines">Busines</option>
+                <option value="Education">Education</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+
+            <textarea 
+                class="input input-textarea"
+                data-name="overview">
+            </textarea>
+
+            <button
+                class="input input-button input-button--blue"
+                data-name="create"
+                data-submit>
+                Create New Workspace
+            </button>
+        </form>
+
+    </div>
+</div>
