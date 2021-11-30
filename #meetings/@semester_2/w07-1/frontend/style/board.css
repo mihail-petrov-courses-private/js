@@ -1,0 +1,7 @@
+#board--toolbar {
+    padding         : 20px;
+    font-size       : 26px;
+    text-transform  : uppercase;
+    font-weight     : bold;
+    border-bottom   : solid 1px #dedede;
+}
