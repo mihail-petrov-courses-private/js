@@ -1,0 +1,74 @@
+#auth {
+    width       : 400px;
+    margin      : 40px auto;   
+}
+
+#auth-wrapper {   
+    background  : #fff;
+    margin-top  : 40px;
+    padding     : 0 40px 40px 40px;
+    box-shadow  : rgba(0,0,0,0.2) 0px 0px 3px ;
+    overflow    : hidden;
+}
+
+#logo {
+    text-align: center;
+}
+
+#logo img {
+    height: 43px;
+}
+
+#auth-slogan {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#auth-form {
+    margin-top: 30px;
+}
+
+.slogan {
+    font-size   : 16px;
+    font-family : "Segoe UI";
+    color       : #5e6c84;
+}
+
+.input {
+    display     : block;
+    width       : 100%;
+    border      : #dedede 2px solid;
+    padding     : 10px;
+    margin-top  : 15px;
+    border-radius   : 3px;
+}
+
+.input-button {
+    border          : none;
+    text-align      : center;
+    cursor          : pointer;
+}
+
+.input-button--green {
+    background  : #5aac44;
+    color       : #fff;
+    font-weight : bold;
+}
+
+.input-button--blue {
+    background  : #0052cc;
+    color       : #fff;
+    font-weight : bold;
+}
+
+
+.placeholder {
+    padding     : 8px;
+    font-weight : bold;
+    font-family : revert;
+    font-family : "Segoe UI";
+}
+
+.placeholder--red {
+    background  : rgba(217,27,92, 0.1);
+}
