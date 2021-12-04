@@ -1,0 +1,38 @@
+.dialog-wrapper {
+    position    : absolute;
+    top         : 0;
+    left        : 0;    
+    width       : 100%;
+    height      : 100%;
+    background  : rgba(0,0,0, 0.6);    
+}
+
+.dialog {
+    position    : relative;
+    width       : 580px;
+    padding     : 70px 110px 30px 110px;
+    margin      : 70px auto;
+    background  : #fff;
+    border-radius: 3px;
+}
+
+
+.dialog-header {
+    font-size: 24px;
+    color: #091E42;
+    font-weight: bold;
+}
+
+.dialog-subtext {
+    font-size: 18px;
+    color: #6B778C;
+}
+
+
+#close-dialog {
+    position    : absolute;
+    top         : 0;
+    right       : 10px;
+    font-size   : 31px;
+    cursor      : pointer;
+}
