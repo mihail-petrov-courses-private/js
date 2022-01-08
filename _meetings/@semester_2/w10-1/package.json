@@ -1,0 +1,27 @@
+{
+  "name": "mrello",
+  "version": "1.0.0",
+  "description": "Ultimate PM system Trello clone",
+  "main": "index.js",
+  "scripts": {
+    "s:tscompile" : "tsc.cmd",
+    "s:template_copy": "node ./scripts/copy-templates.js",
+    "dev" : "npm run s:tscompile & npm run s:template_copy",
+    "test": "jest"
+  },
+  "author": "Mihail Petrov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "copyfile": "^0.1.2",
+    "copyfiles": "^2.4.1",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6",
+    "typescript": "^4.5.2"
+  }
+}
