@@ -1,0 +1,41 @@
+<div id="wrapper">
+
+  <div id="task-placeholder">
+
+  <!-- <div>Вариант 1</div>
+  <div class="task-input">
+    <input #taskInput>
+    <button (click)="saveDomTask(taskInput.value)">
+      Save Task
+    </button>
+  </div>
+
+  <div>Вариант 2</div>
+  <div class="task-input">
+    <input (keyup)="saveDynamicTask($event)" >
+  </div> -->
+
+    <div class="task-input--wrapper">
+      <input
+        class="task-block"
+        placeholder="Enter new task"
+        (keyup)="saveTask($event)" >
+    </div>
+
+    <!-- *ngIf="" -->
+    <!-- *ngFor="" -->
+    <!-- <div *ngIf="taskContent.length > 0"
+      id="task-panel">
+      <div class="task-block">{{taskContent}}</div>
+    </div> -->
+
+    <div id="task-panel">
+      <div
+        *ngFor="let taskItem of taskCollection"
+        class="task-block mt8">{{taskItem}}
+      </div>
+    </div>
+
+
+  </div>
+</div>

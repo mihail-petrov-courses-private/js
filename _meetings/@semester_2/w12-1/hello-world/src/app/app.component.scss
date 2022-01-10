@@ -1,0 +1,26 @@
+#wrapper {
+  background-color: #687ccc;
+  height          : 100vh;
+}
+
+#task-placeholder {
+  width       : 960px;
+  margin      : auto;
+  padding-top : 25px;
+}
+
+#task-panel {
+  margin-top: 18px;
+}
+
+.task-block {
+  width       : 100%;
+  padding     : 7px;
+  border      : none;
+  background  : #fff;
+  font-size   : 22px;
+}
+
+.mt8 {
+  margin-top: 8px;
+}
