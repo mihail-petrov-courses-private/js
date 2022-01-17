@@ -1,0 +1,72 @@
+<div id="wrapper">
+
+  <!-- List Organizer -->
+  <div id="task-organizer">
+
+    <div
+      (click)="onCreateNewList()"
+      class="button">Create New List
+    </div>
+
+    <ul>
+      <li
+        *ngFor="let listItem of listCollection; let i = index"
+        (click)="onSelectList(i)"
+        class="task-organizer--list mt8">
+        <span>{{ listItem.title }}</span>
+        <div
+          *ngIf="listItem.taskCollection.length > 0"
+          class="layout--right">
+          <div class="number-decorator">{{listItem.readyTasks}}</div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- Main Content -->
+  <div id="task-placeholder">
+
+    <div *ngIf="getSelectedList()">
+
+      <div
+        *ngIf="isInTitleViewMode()"
+        (click)="onChangeTitleModeToEdit()" id="task-panel--title">
+        {{ getSelectedList()?.title }}
+      </div>
+
+      <div
+        *ngIf="isInTitleEditMode()">
+        <input #titleEditInput type="text" value="{{getSelectedList()?.title}}">
+        <div (click)="onSaveTitle(titleEditInput.value)" class="button">Save</div>
+      </div>
+
+      <div class="task-input--wrapper">
+        <input
+          class="task-block"
+          placeholder="Enter new task"
+          (keyup)="onSaveTask($event)" >
+      </div>
+
+      <div id="task-panel">
+
+        <div
+          *ngFor="let taskItem of getSelectedTaskCollection(); let i = index">
+          <div
+            *ngIf="isProcessable(taskItem)"
+            class="task-block mt8">
+            <div class="task-block--content">
+              {{taskItem.content}}
+            </div>
+
+            <div class="task-block--action">
+              <div (click)="onRemoveTask(i)" class="button">Remove</div>
+              <div (click)="onCompleateTask(taskItem)" class="button">Done</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
