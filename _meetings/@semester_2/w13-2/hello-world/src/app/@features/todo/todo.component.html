@@ -1,0 +1,13 @@
+<div id="wrapper">
+
+  <app-sidebar
+    (outputSelectedList)="onSelectList()">
+  </app-sidebar>
+
+  <!-- Main Content -->
+  <div id="task-placeholder">
+    <div *ngIf="isListSelected">
+      <app-content></app-content>
+    </div>
+  </div>
+</div>

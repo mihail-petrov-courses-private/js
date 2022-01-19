@@ -1,0 +1,41 @@
+#task-organizer {
+  height: 100%;
+  width : 280px;
+  background-color: #fff;
+}
+
+.button {
+  display         : inline-block;
+  border          : none;
+  padding         : 5px;
+  margin          : 5px;
+  background-color: #dedede;
+  text-transform  : lowercase;
+  cursor          : pointer;
+}
+
+
+.task-organizer--list {
+  display   : flex;
+  padding   : 9px;
+  background: rgba(222, 222, 222, 0.5);
+  cursor    : pointer;
+}
+
+.mt8 {
+  margin-top: 8px;
+}
+
+.number-decorator {
+  display: inline-block;
+  background-color: #687ccc;
+  border-radius: 2px;
+  width: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+
+.layout--right {
+  flex: 1; text-align: right;
+}
