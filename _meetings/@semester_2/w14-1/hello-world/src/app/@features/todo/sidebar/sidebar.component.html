@@ -1,0 +1,23 @@
+  <!-- List Organizer -->
+  <div id="task-organizer">
+
+    <div
+      (click)="onCreateNewList()"
+      class="button">Create New List
+    </div>
+
+    <ul>
+      <li
+        *ngFor="let listItem of listCollection; let i = index"
+        (click)="onSelectList(i)"
+        class="task-organizer--list mt8">
+        <span>{{ listItem.title }}</span>
+        <div
+          *ngIf="listItem.taskCollection.length > 0"
+          class="layout--right">
+          <div class="number-decorator">{{listItem.readyTasks}}</div>
+        </div>
+      </li>
+    </ul>
+
+  </div>

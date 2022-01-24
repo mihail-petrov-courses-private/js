@@ -1,0 +1,78 @@
+#wrapper {
+  display         : flex;
+  background-color: #687ccc;
+  height          : 100vh;
+}
+
+#task-panel--title {
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#task-placeholder {
+  flex: 1;
+  margin      : 35px;
+  padding-top : 25px;
+}
+
+#task-panel {
+
+  margin-top: 18px;
+}
+
+#task-organizer {
+  background-color: #fff;
+  width: 280px;
+}
+
+.task-input--wrapper {
+  margin-top: 20px;
+}
+
+.task-block {
+  display     : flex;
+  padding     : 7px;
+  border      : none;
+  background  : #fff;
+  font-size   : 22px;
+  cursor      : pointer;
+}
+
+.mt8 {
+  margin-top: 8px;
+}
+
+.button {
+  display         : inline-block;
+  border          : none;
+  padding         : 5px;
+  margin          : 5px;
+  background-color: #dedede;
+  text-transform  : lowercase;
+  cursor          : pointer;
+}
+
+.task-block--content {
+  flex: 1;
+}
+
+.task-organizer--list {
+  display   : flex;
+  padding   : 9px;
+  background: rgba(222, 222, 222, 0.5);
+  cursor    : pointer;
+}
+
+.number-decorator {
+  display: inline-block;
+  background-color: #687ccc;
+  border-radius: 2px;
+  width: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.layout--right {
+  flex: 1; text-align: right;
+}

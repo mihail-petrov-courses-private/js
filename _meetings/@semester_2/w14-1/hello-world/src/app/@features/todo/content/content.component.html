@@ -1,0 +1,53 @@
+<div
+  *ngIf="isInTitleViewMode()"
+  (click)="onChangeTitleModeToEdit()"
+  id="task-panel--title">
+  {{ getSelectedList()?.title }}
+</div>
+
+<div
+  *ngIf="isInTitleEditMode()">
+  <input #titleEditInput
+    type="text"
+    value="{{getSelectedList()?.title}}">
+  <div
+    (click)="onSaveTitle(titleEditInput.value)"
+    class="button">
+    Save
+  </div>
+</div>
+
+<div class="task-input--wrapper">
+  <input
+    class="task-block"
+    placeholder="Enter new task"
+    (keyup)="onSaveTask($event)" >
+</div>
+
+<div id="task-panel">
+
+  <div
+    *ngFor="let taskItem of getSelectedTaskCollection(); let i = index">
+    <div
+      *ngIf="isProcessable(taskItem)"
+      (click)="onSelectTask(i)"
+      class="task-block mt8">
+      <div class="task-block--content">
+        {{taskItem.content}}
+      </div>
+
+      <div class="task-block--action">
+        <div
+          (click)="onRemoveTask(i)"
+          class="button">
+          Remove
+        </div>
+        <div
+          (click)="onCompleateTask(taskItem)"
+          class="button">
+          Done
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
