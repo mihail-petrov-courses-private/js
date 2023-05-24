@@ -1,9 +1,0 @@
-{
-    "compilerOptions": {
-
-        "target": "ES6",
-        "skipLibCheck": true,
-        "rootDir": "./frontend/src",
-        "outDir": "./frontend/dest"
-    }
-}

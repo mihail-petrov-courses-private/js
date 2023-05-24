@@ -1,1 +1,0 @@
-ALTER TABLE mrello_db.td_cards ADD board_id INT;
